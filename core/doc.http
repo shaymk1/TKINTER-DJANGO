@@ -1,0 +1,59 @@
+GET http://localhost:8000/api/
+Content-Type: : application/json
+Authorization: Token 2e42a16625eb05ea78bdecee94f46442360c1c8c
+
+
+###POST User login
+POST http://localhost:8000/api-token-auth/ HTTP/1.1
+Content-Type: application/json
+# Authorization: Token 2e42a16625eb05ea78bdecee94f46442360c1c8c
+
+{
+
+  "username": "admin",
+  "password":"admin12"
+}
+
+###POST room data
+
+POST http://localhost:8000/api/create/
+Content-Type:  application/json
+Authorization: Token 2e42a16625eb05ea78bdecee94f46442360c1c8c
+ 
+
+{
+
+  "room_num":12,
+  "guest":1,
+  "check_in":"2021-06-05",
+  "check_out":"2021-06-10"
+
+}
+
+# {
+
+#   "room_num":13,
+#   "guest":2,
+#   "check_in":"2021-06-05",
+#   "check_out":"2021-06-11"
+
+# }
+###PUT/update
+PUT http://localhost:8000/api/4/edit/
+Content-Type:  application/json
+Authorization: Token 2e42a16625eb05ea78bdecee94f46442360c1c8c
+
+{
+
+  "room_num":12,
+  "guest":1,
+  "check_in":"2021-06-05",
+  "check_out":"2021-07-15"
+
+}
+
+###DELETE/update
+DELETE http://localhost:8000/api/4/delete/
+Content-Type:  application/json
+Authorization: Token 2e42a16625eb05ea78bdecee94f46442360c1c8c
+
